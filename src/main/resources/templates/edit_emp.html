@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edit Employee</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center text-primary">Update Employee</h4>
+
+						<form th:action="@{/employee/updateEmployee/{id} (id=${emp.empId})}" th:object="${emp}" method="post">
+
+							<div class="form-group">
+								<span th:text="${emp.empId}"></span>
+								<label>First Name</label> <input type="text" th:value="${emp.firstName}"
+									class="form-control" name="firstName">
+							</div>
+
+							<div class="form-group">
+								<label>Last Name</label> <input type="text" th:value="${emp.lastName}"
+									class="form-control" name="lastName">
+							</div>
+
+							<div class="form-group">
+								<label>Date of Birth</label> <input type="date" th:value="${emp.dob}"
+									class="form-control" name="dob">
+							</div>
+
+
+							<div class="form-group">
+								<label>Start Date</label> <input type="date" th:value="${emp.startDate}"
+									class="form-control" name="startDate">
+							</div>
+							
+							<div class="form-group">
+								<label>Street</label> <input type="text" th:value="${emp.street}"
+									class="form-control" name="street">
+							</div>
+							
+							<div class="form-group">
+								<label>City</label> <input type="text" th:value="${emp.city}"
+									class="form-control" name="city">
+							</div>
+							
+							<div class="form-group">
+								<label>Zipcode</label> <input type="number" th:value="${emp.zipcode}"
+									class="form-control" name="zipcode">
+							</div>
+
+							<div class="form-group"> 
+								<label>Job Type</label> <input type="text" th:value="${emp.jobType}"
+									class="form-control" name="jobType">
+							</div>
+							
+							<div class="form-group">
+								<label>Super ssn</label> <input type="number" th:value="${emp.superEmpId}"
+									class="form-control" name="superEmpId">
+							</div>
+							
+							<div class="form-group">
+								<label>Hourly Rate ID</label> <input type="number" th:value="${emp.hourlyrateId}"
+									class="form-control" name="hourlyrateId">
+							</div>
+							
+							<button class="btn btn-primary btn-block">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

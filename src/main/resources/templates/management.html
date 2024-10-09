@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Management and Reporting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+      <style>
+	
+	
+	    .button-container {
+	      display: flex;
+	      align-items: center;
+	      justify-content: center;
+	    }
+	
+	    .custom-button {
+	      margin: 0 10px;
+	      width: 200px;
+	      height:100px;
+	    }
+  </style>
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" th:href="@{/}">TurtleBack Zoo</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/asset}">Asset Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" th:href="@{/revenueEvents/all}">Daily Zoo Activity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" th:href="@{/management}">Management and Reporting</a>
+        </li>
+    </div>
+  </div>
+</nav>
+	  <br/>
+    <h3 style="text-align: center;">Management and Reporting</h3><br/><br/>
+	<div class="button-container">
+    <a th:href="@{/revenueEvents/revenueSource}"><button type="button" class="btn btn-primary custom-button" >Report of Revenue By Source</button></a>
+    <a th:href="@{/animal/animalPopulation}"><button type="button" class="btn btn-primary custom-button" >Animal Population Report</button></a>
+     <a th:href="@{/revenueEvents/revenueBestDays}"><button type="button" class="btn btn-primary custom-button" >Five Best Days Revenue</button></a>
+     <a th:href="@{/revenueEvents/averageRevenue}"><button type="button" class="btn btn-primary custom-button" >Average Revenue Report</button></a>
+     <a th:href="@{/revenueEvents/topAtt}"><button type="button" class="btn btn-primary custom-button" >Top Three Attractions</button></a>
+
+  </div>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

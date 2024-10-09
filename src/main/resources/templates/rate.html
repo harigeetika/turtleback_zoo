@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hourly Rate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+      <style>
+
+	
+	    .button-container {
+	      display: flex;
+	      margin-left: 18%;
+	    }
+	
+	    .custom-button {
+	      margin: 0 10px;
+	    }
+  </style>
+  </head>
+  <body>
+	  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" th:href="@{/}">TurtleBack Zoo</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/asset}">Asset Management</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" th:href="@{/revenueEvents/all}">Daily Zoo Activity</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" th:href="@{/management}">Management and Reporting</a>
+        </li>
+    </div>
+  </div>
+</nav>
+    <h3 style="text-align: center;">Hourly rates</h3>
+	<div class="button-container">
+		
+    <a th:href="@{/rate/add_rate}"><button type="button" class="btn btn-primary custom-button">Add Hourly Rate</button></a>
+
+  </div>
+  
+  <div><div class="container p-4">
+		<table class="table table-striped" border="1">
+			<thead class="bg-primary text-white">
+				<tr>
+					<th scope="col">Rate ID</th>
+					<th scope="col">Job Type</th>
+					<th scope="col">Hourly Rate</th>
+					<th scope="col">Action</th>
+
+				</tr>
+			</thead>
+			<tbody class="table-group-divider">
+				<tr th:each="rt: ${rates}">
+					<td th:text = "${rt.hourlyrateId}"></td>
+					<td th:text = "${rt.jobType}"></td>
+					<td th:text = "${rt.rate}"></td>
+					
+					<td ><a th:href="@{/rate/edit/{id} (id=${rt.hourlyrateId})}"><button type="button" class="btn btn-warning">Update</button></a>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
