@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The **Turtleback Zoo Management System** course-project CS631 is an integrated application designed to manage The system helps with managing animals, employees, buildings, attractions, attendance, and revenue. The system is designed to facilitate efficient zoo management, streamline administrative tasks, and provide data-driven insights for decision-making.It includes three main applications: Asset Management, Daily Zoo Activity, and Management Reporting.
+The **Turtleback Zoo Management System** course-project CS631 is an integrated application system is designed to facilitate efficient zoo management, streamline administrative tasks, and provide data-driven insights for decision-making.It includes three main applications: Asset Management, Daily Zoo Activity, and Management Reporting.
 
 ## Features
 
